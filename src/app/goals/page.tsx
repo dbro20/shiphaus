@@ -56,54 +56,6 @@ export default function Goals() {
           </div>
         </div>
 
-        {/* No excuses */}
-        <div className="p-10 border-bold bg-[var(--surface)] animate-slide-up stagger-5">
-          <h2 className="text-2xl font-bold mb-6">No Excuses Accepted</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <p className="font-mono text-sm text-[var(--accent-red)] mb-2">NOT ALLOWED</p>
-              <ul className="space-y-2 text-[var(--muted)]">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-red)]" />
-                  Slides or mockups
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-red)]" />
-                  &quot;Imagine if this worked&quot;
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-red)]" />
-                  Localhost-only demos
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-red)]" />
-                  Hardcoded demo data
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-mono text-sm text-[var(--accent-blue)] mb-2">ENCOURAGED</p>
-              <ul className="space-y-2 text-[var(--muted)]">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-blue)]" />
-                  Real, deployed apps
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-blue)]" />
-                  Functional prototypes
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-blue)]" />
-                  Creative experiments
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[var(--accent-blue)]" />
-                  Rough but working
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

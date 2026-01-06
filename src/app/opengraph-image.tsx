@@ -42,13 +42,25 @@ export default async function Image() {
         <div
           style={{
             position: 'absolute',
-            bottom: '60px',
-            right: '200px',
-            width: '150px',
-            height: '150px',
+            bottom: '120px',
+            right: '220px',
+            width: '120px',
+            height: '120px',
             background: '#1E4D8C',
-            opacity: 0.6,
+            opacity: 0.7,
             transform: 'rotate(15deg)',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '40px',
+            right: '80px',
+            width: '100px',
+            height: '100px',
+            background: '#2D936C',
+            opacity: 0.7,
+            transform: 'rotate(-10deg)',
           }}
         />
 

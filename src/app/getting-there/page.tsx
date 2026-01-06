@@ -32,13 +32,13 @@ export default function GettingThere() {
             </a>
           </div>
 
-          <div className="p-10 bg-[var(--accent-blue)] border-bold animate-slide-up stagger-3">
-            <div className="text-sm font-mono uppercase tracking-wider text-[var(--foreground)]/50 mb-4">
+          <div className="p-10 bg-[var(--accent-yellow)] border-bold animate-slide-up stagger-3">
+            <div className="text-sm font-mono uppercase tracking-wider text-[var(--foreground)]/70 mb-4">
               The Haus
             </div>
             <p className="text-3xl font-bold mb-2">Upstate NY</p>
-            <p className="text-xl text-[var(--foreground)]/70 mb-6">Exact address TBD</p>
-            <p className="text-sm text-[var(--foreground)]/50 mb-6">
+            <p className="text-xl text-[var(--foreground)]/80 mb-6">Exact address TBD</p>
+            <p className="text-sm text-[var(--foreground)]/60 mb-6">
               ~2-3 hours from Brooklyn
             </p>
             <a
@@ -47,7 +47,7 @@ export default function GettingThere() {
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[var(--foreground)] text-[var(--background)] font-semibold hover:bg-[var(--accent-red)] transition-colors"
             >
-              View Airbnb
+              View Airbnb Listing
             </a>
           </div>
         </div>

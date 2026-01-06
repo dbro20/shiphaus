@@ -52,13 +52,6 @@ export default function Agenda() {
           />
         </div>
 
-        {/* Bottom reminder */}
-        <div className="mt-24 p-8 bg-[var(--foreground)] text-[var(--background)] border-bold">
-          <p className="text-lg">
-            Remember: In your presentation, you can only use{" "}
-            <span className="font-bold text-[var(--accent-yellow)]">live product</span>.
-          </p>
-        </div>
       </div>
     </div>
   );
