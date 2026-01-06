@@ -16,8 +16,21 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "shiphaus — Build. Ship. Present.",
-  description: "A cabin trip for building, shipping, and presenting live product.",
+  title: "shiphaus — Just Keep Shipping",
+  description: "A cabin trip for building and shipping. January 23-25, 2026. Upstate New York.",
+  metadataBase: new URL("https://shiphaus.dylanbrodeur.org"),
+  openGraph: {
+    title: "shiphaus — Just Keep Shipping",
+    description: "A cabin trip for building and shipping. January 23-25, 2026.",
+    siteName: "shiphaus",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "shiphaus — Just Keep Shipping",
+    description: "A cabin trip for building and shipping. January 23-25, 2026.",
+  },
 };
 
 const navLinks = [
