@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 import Link from "next/link";
-import MobileNav from "@/components/MobileNav";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -69,7 +68,12 @@ export default function RootLayout({
                 </Link>
               ))}
             </div>
-            <MobileNav />
+            {/* Mobile menu indicator */}
+            <div className="md:hidden flex gap-1">
+              <div className="w-2 h-2 rounded-full bg-[var(--accent-red)]" />
+              <div className="w-2 h-2 rounded-full bg-[var(--accent-yellow)]" />
+              <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
+            </div>
           </div>
           <div className="h-[3px] bg-[var(--foreground)]" />
         </nav>
