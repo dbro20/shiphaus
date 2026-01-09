@@ -1,0 +1,96 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/agenda", label: "Agenda" },
+  { href: "/who", label: "Who" },
+  { href: "/goals", label: "Goals" },
+  { href: "/getting-there", label: "Getting There" },
+  { href: "/vibes", label: "Vibes" },
+];
+
+export default function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  return (
+    <div className="md:hidden relative" ref={menuRef}>
+      {/* Menu Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 border-[3px] border-[var(--foreground)] bg-[var(--background)] hover:bg-[var(--surface)] transition-colors"
+        aria-label="Toggle menu"
+        aria-expanded={isOpen}
+      >
+        <div className="flex gap-1">
+          <div className="w-2 h-2 rounded-full bg-[var(--accent-red)]" />
+          <div className="w-2 h-2 rounded-full bg-[var(--accent-yellow)]" />
+          <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
+        </div>
+        <svg
+          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute right-0 top-full mt-2 w-48 bg-[var(--background)] border-[3px] border-[var(--foreground)] shadow-[4px_4px_0_var(--accent-black)] overflow-hidden">
+          {navLinks.map((link, index) => {
+            const isActive = pathname === link.href;
+            const colors = [
+              "var(--accent-red)",
+              "var(--accent-yellow)",
+              "var(--accent-blue)",
+              "var(--accent-green)",
+              "var(--accent-red)",
+              "var(--accent-yellow)",
+            ];
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-4 py-3 text-sm font-medium border-b-2 border-[var(--foreground)] last:border-b-0 transition-colors ${
+                  isActive
+                    ? "bg-[var(--foreground)] text-[var(--background)]"
+                    : "text-[var(--foreground)] hover:bg-[var(--surface)]"
+                }`}
+                style={{
+                  borderLeftWidth: "4px",
+                  borderLeftColor: colors[index],
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
