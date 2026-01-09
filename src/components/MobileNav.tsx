@@ -39,7 +39,8 @@ export default function MobileNav() {
       {/* Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 border-[3px] border-[var(--foreground)] bg-[var(--background)] hover:bg-[var(--surface)] transition-colors"
+        className="flex items-center gap-2 px-3 py-2 bg-[var(--background)] hover:bg-[var(--surface)] transition-colors"
+        style={{ border: "3px solid var(--foreground)" }}
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
@@ -60,7 +61,10 @@ export default function MobileNav() {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-48 bg-[var(--background)] border-[3px] border-[var(--foreground)] shadow-[4px_4px_0_var(--accent-black)] overflow-hidden">
+        <div
+          className="absolute right-0 top-full mt-2 w-48 bg-[var(--background)] overflow-hidden"
+          style={{ border: "3px solid var(--foreground)", boxShadow: "4px 4px 0 var(--accent-black)" }}
+        >
           {navLinks.map((link, index) => {
             const isActive = pathname === link.href;
             const colors = [
