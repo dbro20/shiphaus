@@ -39,24 +39,13 @@ export default function MobileNav() {
       {/* Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 bg-[var(--background)] hover:bg-[var(--surface)] transition-colors"
-        style={{ border: "3px solid var(--foreground)" }}
+        className="flex gap-1 p-2"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
-        <div className="flex gap-1">
-          <div className="w-2 h-2 rounded-full bg-[var(--accent-red)]" />
-          <div className="w-2 h-2 rounded-full bg-[var(--accent-yellow)]" />
-          <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
-        </div>
-        <svg
-          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
-        </svg>
+        <div className="w-2 h-2 rounded-full bg-[var(--accent-red)]" />
+        <div className="w-2 h-2 rounded-full bg-[var(--accent-yellow)]" />
+        <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
       </button>
 
       {/* Dropdown Menu */}
