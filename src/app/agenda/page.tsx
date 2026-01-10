@@ -18,7 +18,7 @@ export default function Agenda() {
             color="var(--accent-red)"
             items={[
               { time: "Morning", title: "Whole Foods Trip", description: "Stock up for the weekend. Let Kirill know if you have special requests." },
-              { time: "Noon", title: "Depart Brooklyn", description: "Leave from 1 S 1st St. Don't be late!", highlight: true },
+              { time: "11am", title: "Depart Brooklyn", description: "Leave from 1 S 1st St. Don't be late!", highlight: true },
               { time: "~3:00 PM", title: "Arrive & Settle In", description: "Get to the cabin, pick rooms, unpack" },
               { time: "4:00 PM", title: "Kickoff", description: "Share what everyone is building this weekend" },
               { time: "5:30 PM", title: "Dinner: Steaks", description: "Steaks, potatoes, and asparagus", highlight: true },
