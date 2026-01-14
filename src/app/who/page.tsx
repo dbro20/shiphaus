@@ -6,6 +6,7 @@ export default function Who() {
     { name: "Dylan", initial: "D", color: "var(--accent-green)", description: "No longer code inept, just happy the slop code works" },
     { name: "Eden", initial: "E", color: "var(--accent-red)", description: "Talented google engineer, trying to exit wagie status" },
     { name: "Greg", initial: "G", color: "var(--accent-blue)", description: "Newly entered boomer status by wearing sweaters" },
+    { name: "Tomer", initial: "T", color: "var(--accent-yellow)", description: "Opinionated dev, former volleyball state champion, surprisingly good at spikeball" },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function Who() {
           {attendees.map((person, i) => (
             <div
               key={person.name}
-              className={`card-hover border-bold p-6 animate-slide-up stagger-${(i % 5) + 1}`}
+              className={`card-hover border-bold p-6 animate-slide-up stagger-${(i % 5) + 1} ${i === 6 ? "lg:col-start-2" : ""}`}
             >
               <div
                 className="w-20 h-20 flex items-center justify-center text-4xl font-bold text-[var(--foreground)] mb-6"
