@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Countdown from "@/components/Countdown";
 
 export default function Home() {
   return (
@@ -27,7 +28,11 @@ export default function Home() {
               Just Keep Shipping.
             </p>
 
-            <div className="flex flex-wrap gap-4 animate-slide-up stagger-3">
+            <div className="animate-slide-up stagger-3">
+              <Countdown />
+            </div>
+
+            <div className="flex flex-wrap gap-4 animate-slide-up stagger-4">
               <Link
                 href="/agenda"
                 className="px-8 py-4 bg-[var(--foreground)] text-[var(--background)] font-semibold border-bold hover:bg-[var(--accent-red)] hover:border-[var(--accent-red)] transition-colors"
@@ -47,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Bottom tagline */}
-        <div className="pt-12 border-t-[3px] border-[var(--foreground)] animate-slide-up stagger-4">
+        <div className="pt-12 border-t-[3px] border-[var(--foreground)] animate-slide-up stagger-5">
           <p className="font-mono text-sm uppercase tracking-wider text-[var(--muted)]">
             Upstate New York
           </p>
