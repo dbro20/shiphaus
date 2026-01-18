@@ -6,6 +6,7 @@ export default function Who() {
     { name: "Dylan", initial: "D", color: "var(--accent-green)", description: "No longer code inept, just happy the slop code works" },
     { name: "Eden", initial: "E", color: "var(--accent-red)", description: "Talented google engineer, trying to exit wagie status" },
     { name: "Greg", initial: "G", color: "var(--accent-blue)", description: "Newly entered boomer status by wearing sweaters" },
+    { name: "Dawson", initial: "D", color: "var(--accent-yellow)", description: "Crazy bicycle guy building in consumer crypto" },
   ];
 
   return (
