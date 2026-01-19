@@ -18,7 +18,7 @@ export default function Who() {
           {attendees.map((person, i) => (
             <div
               key={person.name}
-              className={`card-hover border-bold p-6 animate-slide-up stagger-${(i % 5) + 1} ${i === 6 ? "lg:col-start-2" : ""}`}
+              className={`card-hover border-bold p-6 animate-slide-up stagger-${(i % 5) + 1}`}
             >
               <div
                 className="w-20 h-20 flex items-center justify-center text-4xl font-bold text-[var(--foreground)] mb-6"
