@@ -14,13 +14,16 @@ export default function GettingThere() {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="p-10 bg-[var(--foreground)] text-[var(--background)] border-bold animate-slide-up stagger-2">
             <div className="text-sm font-mono uppercase tracking-wider text-[var(--background)]/50 mb-4">
-              Carpool Meetup
+              Car 1
             </div>
             <p className="text-3xl font-bold mb-2">1 S 1st St</p>
-            <p className="text-xl text-[var(--background)]/70 mb-6">Brooklyn, NY</p>
+            <p className="text-xl text-[var(--background)]/70 mb-4">Brooklyn, NY</p>
+            <p className="text-sm text-[var(--background)]/70 mb-4">
+              Slobo, Kirill, Igor, Greg
+            </p>
             <div className="flex flex-col gap-2 text-sm text-[var(--background)]/50">
               <p>Friday, January 23, 2026</p>
-              <p>Departure: Noon</p>
+              <p>Departure: 12pm</p>
             </div>
             <a
               href="https://maps.google.com/?q=1+S+1st+St,+Brooklyn,+NY"
@@ -32,7 +35,33 @@ export default function GettingThere() {
             </a>
           </div>
 
-          <div className="p-10 bg-[var(--accent-yellow)] border-bold animate-slide-up stagger-3">
+          <div className="p-10 bg-[var(--accent-blue)] text-[var(--background)] border-bold animate-slide-up stagger-3">
+            <div className="text-sm font-mono uppercase tracking-wider text-[var(--background)]/50 mb-4">
+              Car 2
+            </div>
+            <p className="text-3xl font-bold mb-2">88 Withers St</p>
+            <p className="text-xl text-[var(--background)]/70 mb-4">Brooklyn, NY</p>
+            <p className="text-sm text-[var(--background)]/70 mb-4">
+              Dylan, Eden, Tomer, Dawson
+            </p>
+            <div className="flex flex-col gap-2 text-sm text-[var(--background)]/50">
+              <p>Friday, January 23, 2026</p>
+              <p>Departure: 3pm</p>
+            </div>
+            <a
+              href="https://maps.google.com/?q=88+Withers+St,+Brooklyn,+NY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 px-6 py-3 bg-[var(--accent-yellow)] text-[var(--foreground)] font-semibold hover:bg-[var(--accent-red)] transition-colors"
+            >
+              Open in Maps
+            </a>
+          </div>
+        </div>
+
+        {/* Destination */}
+        <div className="mb-16">
+          <div className="p-10 bg-[var(--accent-yellow)] border-bold animate-slide-up stagger-4">
             <div className="text-sm font-mono uppercase tracking-wider text-[var(--foreground)]/70 mb-4">
               The Haus
             </div>
