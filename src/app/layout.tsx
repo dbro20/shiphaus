@@ -39,6 +39,7 @@ const navLinks = [
   { href: "/who", label: "Who" },
   { href: "/goals", label: "Goals" },
   { href: "/ideas", label: "Ideas" },
+  { href: "/submissions", label: "Submissions" },
   { href: "/getting-there", label: "Getting There" },
   { href: "/vibes", label: "Vibes" },
 ];
