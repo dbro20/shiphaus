@@ -21,6 +21,7 @@ Go to https://supabase.com, create free account, new project.
 create table ideas (
   id serial primary key,
   submitter text not null,
+  format text not null,
   problem text not null,
   hypothesis text not null,
   created_at timestamp with time zone default now()

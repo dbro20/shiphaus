@@ -8,6 +8,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export type Idea = {
   id: number;
   submitter: string;
+  format: string;
   problem: string;
   hypothesis: string;
   created_at: string;
